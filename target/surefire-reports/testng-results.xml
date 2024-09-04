@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-05T00:11:14 IST" name="Surefire suite" finished-at="2024-09-05T00:11:22 IST" duration-ms="8226">
+    <groups>
+    </groups>
+    <test started-at="2024-09-05T00:11:14 IST" name="Surefire test" finished-at="2024-09-05T00:11:22 IST" duration-ms="8226">
+      <class name="testCases.LoginTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:testCases.LoginTest@29d89d5d]" started-at="2024-09-05T00:11:14 IST" name="Setup" finished-at="2024-09-05T00:11:16 IST" duration-ms="2379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="testValidLoginTest()[pri:0, instance:testCases.LoginTest@29d89d5d]" started-at="2024-09-05T00:11:16 IST" name="testValidLoginTest" finished-at="2024-09-05T00:11:22 IST" duration-ms="5683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginTest@29d89d5d]" started-at="2024-09-05T00:11:22 IST" name="tearDown" finished-at="2024-09-05T00:11:22 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -13,6 +13,22 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void Setup() {
+
+		String currentDir = System.getProperty("user.dir");
+  System.out.println("Current dir using System:" + currentDir);
+System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+//options = new ChromeOptions();
+ChromeOptions options = new ChromeOptions();
+//options.addArguments("--remote-debugging-port=9222");
+options.addArguments("--headless"); // Run in headless mode
+       options.addArguments("--no-sandbox"); // Bypass the sandbox
+       options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
+driver = new ChromeDriver(options);
+//driver.get("https://amazon.in");
+driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+			
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	
 		
 		/*
 		 * ChromeOptions options = new ChromeOptions();
@@ -21,10 +37,10 @@ public class BaseClass {
 		 * options.addArguments("--disable-gpu"); driver = new ChromeDriver(options);
 		 */
 
-		driver= new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		//driver= new ChromeDriver();
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 	}
 	

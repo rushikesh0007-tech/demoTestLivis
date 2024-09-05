@@ -44,7 +44,7 @@ jobs:
     - name: Run tests with Maven
       run: mvn clean test
 
-    - name: Upload Test Report
+    - name: Publish Test Report
       if: always()
       uses: actions/upload-artifact@v3
       with:

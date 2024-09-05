@@ -23,43 +23,50 @@
             <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.36</version>
+		</dependency>
+
     </dependencies>
 
-    <!-- Build section with compiler and encoding configuration -->
+	<!-- Build section with compiler and encoding configuration -->
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin -->
+			<!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <!-- Set source and target compatibility -->
+					<!-- Set source and target compatibility -->
                     <source>11</source>
                     <target>11</target>
-                    <!-- Set file encoding to avoid platform encoding issues -->
+					<!-- Set file encoding to avoid platform encoding issues -->
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 
-            <!-- Maven Surefire Plugin for TestNG Integration -->
+			<!-- Maven Surefire Plugin for TestNG Integration -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <!-- Use TestNG as the testing framework -->
+					<!-- Use TestNG as the testing framework -->
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <!-- Enable reports generation -->
+					<!-- Enable reports generation -->
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <!-- Properties section to set default configurations -->
+	<!-- Properties section to set default configurations -->
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>

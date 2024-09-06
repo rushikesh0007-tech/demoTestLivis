@@ -10,45 +10,45 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
 	public WebDriver driver;
-	
+
 	@BeforeMethod
 	public void Setup() {
+		
+		// This is for gitHub
 
-		String currentDir = System.getProperty("user.dir");
-  System.out.println("Current dir using System:" + currentDir);
-System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-//options = new ChromeOptions();
-ChromeOptions options = new ChromeOptions();
-//options.addArguments("--remote-debugging-port=9222");
-options.addArguments("--headless"); // Run in headless mode
-       options.addArguments("--no-sandbox"); // Bypass the sandbox
-       options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
-driver = new ChromeDriver(options);
-//driver.get("https://amazon.in");
-driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-			
-driver.manage().window().maximize();
-driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	
 		
 		/*
+		 * String currentDir = System.getProperty("user.dir");
+		 * System.out.println("Current dir using System:" + currentDir);
+		 * System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+		 * 
 		 * ChromeOptions options = new ChromeOptions();
-		 * options.addArguments("--headless"); options.addArguments("--no-sandbox");
-		 * options.addArguments("--disable-dev-shm-usage");
-		 * options.addArguments("--disable-gpu"); driver = new ChromeDriver(options);
+		 * 
+		 * options.addArguments("--headless"); // Run in headless mode
+		 * options.addArguments("--no-sandbox"); // Bypass the sandbox
+		 * options.addArguments("--disable-dev-shm-usage"); // Overcome limited resource
+		 * driver = new ChromeDriver(options);
+		 * 
+		 * driver.get("https://demo.livis.ai/auth/login");
+		 * 
+		 * driver.manage().window().maximize();
+		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		 */
 
-		//driver= new ChromeDriver();
-		//driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+		 // this is for local
+			
+			
+			  driver = new ChromeDriver(); driver.manage().window().maximize();
+			  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); driver.
+			  get("https://demo.livis.ai/auth/login");
+			 
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
-		 if (driver != null) {
-	            driver.quit();
-	        }
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 }

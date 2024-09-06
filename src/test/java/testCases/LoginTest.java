@@ -11,8 +11,8 @@ public class LoginTest extends BaseClass{
 	@Test
 	public void testValidLoginTest() {
 		Loginpage lp= new Loginpage(driver);
-		lp.setUsername("Admin");
-		lp.setPassword("admin123");
+		lp.setUsername("devteam@dev-livis.ai");
+		lp.setPassword("123@Devs");
 		lp.clickLoginButton();
 			
        
